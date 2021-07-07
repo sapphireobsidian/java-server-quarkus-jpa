@@ -1,0 +1,16 @@
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+VALUES (1, 123456789, 0, 550.78, 'Debbie Hall', 12345, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (2, 111222333, 0, 2389.32, 'David Tennant', 112211, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (3, 444666, 0, 3499.12, 'Billie Piper', 332233, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (4, 87878787, 0, 890.54, 'Matt Smith', 444434, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (5, 990880221, 0, 1298.34, 'Alex Kingston', 778877, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (6, 987654321, 0, 781.82, 'Tom Baker', 908990, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (7, 5465, 0, 239.33, 'Alex Trebek', 776868, 1);
+INSERT INTO account(id, accountNumber, accountStatus, balance, customerName, customerNumber, version)
+ VALUES (8, 78790, 0, 439.01, 'Vanna White', 444222, 1);

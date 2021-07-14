@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
+import javax.persistence.QueryHint;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Version;
 import javax.validation.constraints.DecimalMin;
@@ -17,8 +18,10 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity 
-@NamedQuery(name = "Accounts.findAll", query = "SELECT a FROM Account a ORDER BY a.id ASC")
-@NamedQuery(name = "Accounts.findByAccountNumber", query = "SELECT a FROM Account a WHERE a.accountNumber = :accountNumber ORDER BY a.id ASC")
+@NamedQuery(name = "Accounts.findAll", query = "SELECT a FROM Account a ORDER BY a.id ASC", hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
+@NamedQuery(name = "Accounts.findByAccountNumber", 
+	query = "SELECT a FROM Account a WHERE a.accountNumber = :accountNumber ORDER BY a.id ASC",
+	hints = @QueryHint(name = "org.hibernate.cacheable", value = "true"))
 @Cacheable // Enable Local Caching / Not A Clustered Cache By Default
 public class Account {
 
